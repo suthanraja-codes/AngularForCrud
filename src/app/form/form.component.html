@@ -1,0 +1,88 @@
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+    <!-- Css Link -->
+    <link rel="stylesheet" href="form.component.css">
+
+    <title>Form Registration</title>
+</head>
+<body>
+    <div class="form-main-wrapper ">
+        <!-- Author: FormBold Team -->
+        <!-- Learn More: https://formbold.com -->
+        <div class="formbold-form-wrapper forms">
+      
+          <form  (ngSubmit)="onSubmit()">
+            <div class="formbold-form-title ">
+              <h2 class="">Register now</h2>
+              <p>
+                Employee Registration Form - Fill All The Field
+              </p>
+            </div>
+      
+            <div class="formbold-input-flex">
+
+              <div>
+                <label for="Name" class="formbold-form-label"> Name </label>
+                <input  class="formbold-form-input" type="text" name="empName"  id="empName" [(ngModel)]="employee.empName"/>
+              </div>
+
+              <div>
+                <label for="age" class="formbold-form-label"> Age </label>
+                <input class="formbold-form-input" type="number" name="empAge" id="empAge" [(ngModel)]="employee.empAge" />
+              </div>
+
+            </div>
+
+            <div class="formbold-mb-3">
+                <div>
+                    <label for="gender" class="formbold-form-label">Gender</label>
+                </div>
+                <div class="formbold-input-flex">
+                    <input class="form-input-input" type="radio"  name="empGender" value="male" [(ngModel)]="employee.empGender"> Male
+                    <input class="form-input-input" type="radio" name="empGender" value="female" [(ngModel)]="employee.empAge"> Female
+                </div>
+
+            </div>
+      
+            <div class="formbold-input-flex">
+              <div>
+                <label for="email" class="formbold-form-label"> Email </label>
+                <input class="formbold-form-input" type="email" name="empGmail" id="empGmail" [(ngModel)]="employee.empEmail" />
+              </div>
+              <div>
+                <label for="phone" class="formbold-form-label"> Destination</label>
+                <input class="formbold-form-input" type="text" name="empDestination" id="empDestination" [(ngModel)]="employee.empDestination" />
+              </div>
+            </div>
+      
+    
+      
+            <div class="formbold-input-flex">
+              <div>
+                <label for="post" class="formbold-form-label"> Salary </label>
+                <input class="formbold-form-input" type="number" name="empSalary" id="empSalary" [(ngModel)]="employee.empSalary" />
+              </div>
+              <div>
+                <label for="area" class="formbold-form-label"> Branch </label>
+                <input class="formbold-form-input" type="text" name="empBranch" id="empBranch" [(ngModel)]="employee.empBranch" />
+              </div>
+            </div>
+      
+        
+            <div class="btn-flex">
+                <button class="formbold-btn submit" type="submit"><a href="employee">Register Now</a> </button>
+                <button class="formbold-btn view" type="button"><a href="list"> View All</a></button>
+            </div>
+
+          </form>
+        </div>
+      </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
